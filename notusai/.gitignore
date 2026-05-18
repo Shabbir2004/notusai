@@ -1,0 +1,24 @@
+# PRIVATE — never commit these to public GitHub
+
+# Your founder kit — IP, prompts, sales scripts, internal docs
+kit/
+
+# Internal docs not for public
+PUBLIC_VS_PRIVATE.md
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+node_modules/
+.vscode/
+.idea/
+*.swp
+__pycache__/
+*.pyc
+
+# Drafts you generate while testing
+drafts/
+*.draft.md
