@@ -1,0 +1,24 @@
+# PRIVATE — never push to public GitHub
+
+# Internal architecture & strategy doc (do not expose)
+NOTUS_PLAN.md
+
+# Memory / Claude session data
+.claude/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+node_modules/
+.vscode/
+.idea/
+*.swp
+__pycache__/
+*.pyc
+
+# Backup files
+*~
+*.bak
