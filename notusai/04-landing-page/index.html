@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NotusAI — AI-drafted GST notice replies for Indian CA firms</title>
+  <meta name="description" content="Draft GST notice replies (ASMT-10, DRC-01) in 24 hours instead of 4-8 hours. AI-drafted with proper CGST Act citations and case law references. ₹999 per notice.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #fafaf9;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header { padding: 32px 0; border-bottom: 1px solid #e7e5e4; }
+    .logo {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 22px; font-weight: 700; color: #1c1917;
+    }
+    .logo-mark {
+      width: 32px; height: 32px;
+      background: #1c1917; color: #fafaf9;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 6px; font-size: 16px; font-weight: 800;
+    }
+
+    /* Hero */
+    .hero { padding: 80px 0 64px; }
+    .hero h1 {
+      font-size: 44px; line-height: 1.15; font-weight: 800;
+      color: #1c1917; letter-spacing: -0.02em; margin-bottom: 20px;
+    }
+    .hero .subtitle {
+      font-size: 19px; color: #57534e; margin-bottom: 36px;
+    }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: #1c1917; color: #fafaf9; padding: 14px 24px;
+      border-radius: 8px; text-decoration: none; font-weight: 600;
+      font-size: 16px; transition: opacity 0.2s; display: inline-block;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-secondary {
+      background: transparent; color: #1c1917; padding: 14px 24px;
+      border-radius: 8px; text-decoration: none; font-weight: 600;
+      font-size: 16px; border: 1px solid #d6d3d1; display: inline-block;
+    }
+
+    /* Stat strip */
+    .stat-strip {
+      background: #fff; border: 1px solid #e7e5e4; border-radius: 12px;
+      padding: 24px; margin-bottom: 64px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+    .stat-num {
+      font-size: 28px; font-weight: 800; color: #1c1917;
+    }
+    .stat-label {
+      font-size: 13px; color: #78716c; margin-top: 2px;
+    }
+
+    /* Sections */
+    section { padding: 56px 0; border-top: 1px solid #e7e5e4; }
+    h2 {
+      font-size: 28px; font-weight: 700; color: #1c1917;
+      letter-spacing: -0.01em; margin-bottom: 24px;
+    }
+    h3 {
+      font-size: 18px; font-weight: 700; color: #1c1917;
+      margin-bottom: 8px;
+    }
+    p { color: #44403c; margin-bottom: 16px; }
+
+    /* How it works */
+    .steps { display: grid; gap: 24px; }
+    .step {
+      display: flex; gap: 20px; align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0; width: 36px; height: 36px;
+      background: #1c1917; color: #fafaf9;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 15px;
+    }
+    .step-content p { margin-bottom: 0; }
+
+    /* Pricing */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+    .price-card {
+      background: #fff; border: 1px solid #e7e5e4;
+      border-radius: 12px; padding: 24px; text-align: center;
+    }
+    .price-card.featured {
+      border: 2px solid #1c1917;
+    }
+    .price-tier {
+      font-size: 13px; color: #78716c; text-transform: uppercase;
+      letter-spacing: 0.05em; font-weight: 600;
+    }
+    .price-amount {
+      font-size: 32px; font-weight: 800; color: #1c1917;
+      margin: 8px 0 4px;
+    }
+    .price-unit {
+      font-size: 13px; color: #78716c;
+    }
+    .price-list {
+      list-style: none; margin-top: 16px; text-align: left;
+      font-size: 14px; color: #44403c;
+    }
+    .price-list li {
+      padding: 6px 0; border-top: 1px solid #f5f5f4;
+    }
+
+    /* FAQ */
+    .faq-item {
+      padding: 16px 0; border-bottom: 1px solid #e7e5e4;
+    }
+    .faq-q { font-weight: 700; color: #1c1917; margin-bottom: 6px; }
+
+    /* Final CTA */
+    .final-cta {
+      background: #1c1917; color: #fafaf9; padding: 48px;
+      border-radius: 12px; text-align: center; margin: 64px 0;
+    }
+    .final-cta h2 { color: #fafaf9; margin-bottom: 12px; }
+    .final-cta p { color: #d6d3d1; margin-bottom: 24px; }
+    .final-cta .btn-primary {
+      background: #fafaf9; color: #1c1917;
+    }
+
+    /* Footer */
+    footer {
+      padding: 32px 0; border-top: 1px solid #e7e5e4;
+      font-size: 13px; color: #78716c; text-align: center;
+    }
+    footer a { color: #1c1917; text-decoration: none; }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 32px; }
+      .hero .subtitle { font-size: 17px; }
+      .stat-strip { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <div class="logo-mark">N</div>
+        <div>NotusAI</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>AI-drafted GST notice replies for Indian CA firms.</h1>
+        <p class="subtitle">Send us an ASMT-10, DRC-01, or Section 73 SCN. Get back a formal reply draft in 24 hours — with proper CGST Act sections, CBIC circulars, and HC/CESTAT case-law citations. ₹999 per notice. First one free.</p>
+        <div class="cta-row">
+          <a href="https://wa.me/9518559714?text=Hi%2C+I+have+a+pending+GST+notice+to+draft+a+reply+for." class="btn-primary">Get first draft free →</a>
+          <a href="#how-it-works" class="btn-secondary">How it works</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="stat-strip">
+        <div>
+          <div class="stat-num">24 hrs</div>
+          <div class="stat-label">Turnaround</div>
+        </div>
+        <div>
+          <div class="stat-num">₹999</div>
+          <div class="stat-label">Per notice</div>
+        </div>
+        <div>
+          <div class="stat-num">First free</div>
+          <div class="stat-label">No commitment</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <section id="how-it-works">
+      <div class="container">
+        <h2>How it works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3>You send the notice</h3>
+              <p>Forward the ASMT-10 / DRC-01 / SCN to us on WhatsApp or email. PDF or photo works.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3>You answer 6 quick questions</h3>
+              <p>Client name, GSTIN, period, deadline, key facts, preferred defense tone. Takes 2 minutes.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3>We draft your reply in 24 hours</h3>
+              <p>Formal letter with specific CGST Act section citations, CBIC circulars, and 2–3 HC/CESTAT case laws. Delivered as PDF ready for your letterhead.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h3>You review and file</h3>
+              <p>Make any edits (most are 80–90% ready as-is), add client letterhead, upload to GST portal. We never store your portal credentials.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section>
+      <div class="container">
+        <h2>Simple pricing</h2>
+        <p>Pay per notice. No subscription. No commitment.</p>
+
+        <div class="pricing-grid">
+          <div class="price-card">
+            <div class="price-tier">Simple</div>
+            <div class="price-amount">₹999</div>
+            <div class="price-unit">per notice</div>
+            <ul class="price-list">
+              <li>Single-issue notice</li>
+              <li>Demand under ₹2 lakh</li>
+              <li>Standard ITC mismatch</li>
+              <li>24-hour turnaround</li>
+            </ul>
+          </div>
+          <div class="price-card featured">
+            <div class="price-tier">Medium</div>
+            <div class="price-amount">₹1,999</div>
+            <div class="price-unit">per notice</div>
+            <ul class="price-list">
+              <li>Multi-issue notice</li>
+              <li>Demand ₹2–10 lakh</li>
+              <li>Vendor coordination</li>
+              <li>Multiple periods</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <div class="price-tier">Complex</div>
+            <div class="price-amount">₹4,999</div>
+            <div class="price-unit">per notice</div>
+            <ul class="price-list">
+              <li>Demand above ₹10 lakh</li>
+              <li>Section 74 / fraud</li>
+              <li>Multi-state cases</li>
+              <li>Appeals support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <div class="container">
+        <h2>Common questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-q">Is this software or service?</div>
+          <p>Today, it's a service powered by AI. You send us the notice, we use AI to do the heavy research and drafting, a human reviews every draft before delivery. As we scale, the same workflow will become a self-serve product.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Does the AI hallucinate case law?</div>
+          <p>AI is prompted to flag uncertain citations as "[verify before filing]" rather than fabricate. Every draft is human-reviewed for citation accuracy on Indian Kanoon before delivery.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Do you store my client's GST portal credentials?</div>
+          <p>No, never. We deliver a PDF draft. You upload to the GST portal yourself. We don't ask for or store any portal logins.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What if the draft quality is bad?</div>
+          <p>First draft is free for every new CA. If you find it unusable, no payment. Just give honest feedback so we can improve.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">How is this different from Suvit / Vyapar TaxOne / ClearTax?</div>
+          <p>Those tools do bookkeeping automation and GST filing. They don't draft notice replies with legal-grade citations and case-law references. We focus specifically on the notice/litigation layer.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Do you serve large firms?</div>
+          <p>Currently working with small and mid-size CA firms. For larger firms with 10+ partners, please reach out for custom volume pricing.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="final-cta">
+        <h2>Send your first notice. It's on us.</h2>
+        <p>Forward any pending ASMT-10 or DRC-01. We'll draft a reply in 24 hours. No commitment, no card details, no subscription.</p>
+        <a href="https://wa.me/9518559714?text=Hi%2C+I+want+to+try+a+free+draft." class="btn-primary">Get first draft free →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>NotusAI · Built in India for Indian CAs</p>
+      <p style="margin-top: 8px;">
+        <a href="mailto:shabbirabbas2004@gmail.com">shabbirabbas2004@gmail.com</a> ·
+        <a href="https://wa.me/9518559714">WhatsApp</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
