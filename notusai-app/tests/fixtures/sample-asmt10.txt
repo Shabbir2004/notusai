@@ -1,0 +1,34 @@
+Reference No: ASMT-10/MUM/W-04/2025-26/3847
+Date: 12.10.2025
+
+Office of the Assistant Commissioner of State Tax
+Ward 04, Mumbai South Commissionerate
+
+To,
+M/s Sharma Textile Industries
+12, Industrial Estate, Lower Parel
+Mumbai - 400013
+GSTIN: 27AABCS1234M1Z5
+
+Subject: Scrutiny of returns filed for the tax period April 2025 to June 2025 — Discrepancies noticed — Notice under Section 61 of the Maharashtra GST Act, 2017 read with Rule 99 of the Maharashtra GST Rules, 2017.
+
+Sir/Madam,
+
+You have filed Form GSTR-3B for the tax periods Apr-2025, May-2025 and Jun-2025 claiming Input Tax Credit (ITC) of Rs. 18,42,000/-. However, on cross-verification with auto-populated GSTR-2B for the said period, the eligible ITC reflected therein is only Rs. 15,00,000/-.
+
+Discrepancy noted:
+   - Excess ITC claimed: Rs. 3,42,000/-
+   - Period: April 2025 to June 2025 (Q1 FY 2025-26)
+   - Suspected reason: Vendor non-compliance / missing invoices in 2B
+
+You are hereby called upon to explain the discrepancy within 30 (thirty) days from the date of receipt of this notice, failing which proceedings under Section 73/74 of the CGST Act, 2017 will be initiated for recovery of the said tax along with applicable interest under Section 50 and penalty as per law.
+
+If you wish to make any submission, please reply through Form GST ASMT-11 on the GST common portal within the stipulated time. Supporting documents may be uploaded as Annexures.
+
+In case you require any clarification, you may visit this office during working hours.
+
+Failing which, demand-cum-show-cause notice in Form DRC-01 shall be issued under Section 73(1) of the CGST Act, 2017.
+
+(signed)
+Assistant Commissioner of State Tax
+Ward 04, Mumbai

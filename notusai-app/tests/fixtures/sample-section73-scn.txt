@@ -1,0 +1,49 @@
+Reference No: SCN/GST/AHD/W-12/2025-26/2284
+Date: 28.10.2025
+
+Office of the Superintendent of Central Tax
+Ward 12, Ahmedabad West Commissionerate
+
+To,
+M/s Surat Diamonds Trading Co
+51, Diamond Market, Mahidharpura
+Surat - 395003
+GSTIN: 24AABCS3344M1ZQ
+
+Subject: Show Cause Notice under Section 73(1) of the CGST Act, 2017 read with Section 20 of the IGST Act, 2017 — Apparent suppression of outward supplies and wrongful availment of ITC for FY 2023-24.
+
+Sir,
+
+It has been observed during the audit conducted under Section 65 of the CGST Act, 2017 that:
+
+1. Outward taxable supplies aggregating Rs. 1,24,50,000/- have been suppressed in GSTR-1 and GSTR-3B for FY 2023-24, leading to short payment of IGST of Rs. 22,41,000/-.
+
+2. Ineligible Input Tax Credit of Rs. 4,80,000/- has been availed on:
+   (a) Invoices issued by suppliers whose GST registration was cancelled prior to the date of invoice [Section 16(2)(b)]
+   (b) Personal/non-business expenses booked in the company's name
+
+3. Discrepancy between e-way bills generated and GSTR-1 disclosures indicates suppression.
+
+The total demand including tax, interest and penalty is computed as follows:
+
+   TAX (IGST short paid):       Rs. 22,41,000
+   TAX (Ineligible ITC):        Rs.  4,80,000
+   ─────────────────────────────────────────────
+   Sub-total tax:               Rs. 27,21,000
+
+   Interest under Section 50:   Rs.  4,89,780  (18% p.a.)
+   Penalty under Section 73(9): Rs.  2,72,100  (10% of tax)
+   ─────────────────────────────────────────────
+   GRAND TOTAL:                 Rs. 34,82,880
+
+NOW THEREFORE, you are required to show cause within 30 (thirty) days as to why:
+
+(a) The aforesaid amount along with applicable interest should not be recovered under Section 73(1) of the CGST Act, 2017
+(b) Penalty under Section 73(9) should not be imposed
+(c) Any other action under the CGST Act, IGST Act and CGST Rules should not be initiated
+
+Reply in Form GST DRC-06 on the common portal. Personal hearing may be requested.
+
+(signed)
+Superintendent of Central Tax
+Ward 12, Ahmedabad West
