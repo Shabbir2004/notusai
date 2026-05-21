@@ -66,10 +66,12 @@ export function NotificationBell() {
       {open && (
         <>
           <div
-            className="fixed inset-0 z-10"
+            className="fixed inset-0 z-40"
             onClick={() => setOpen(false)}
           />
-          <div className="absolute right-0 z-20 mt-2 w-96 overflow-hidden rounded-xl border border-ink-200 bg-white shadow-lg">
+          {/* Anchored just to the right of the sidebar (w-60 = 240px), top below header (h-16 = 64px).
+              Fixed positioning escapes the sidebar's clipping bounds. */}
+          <div className="fixed left-[244px] top-[60px] z-50 w-96 overflow-hidden rounded-xl border border-ink-200 bg-white shadow-xl">
             <div className="flex items-center justify-between border-b border-ink-200 px-4 py-3">
               <div className="font-semibold">Notifications</div>
               {unreadCount > 0 && (
